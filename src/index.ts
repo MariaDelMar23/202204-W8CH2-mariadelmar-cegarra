@@ -16,4 +16,4 @@ setTimeout(() => {
 
 setTimeout(() => {
   robots[0].work();
-}, 17000);
+}, 110000);

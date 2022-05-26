@@ -6,12 +6,12 @@ export class Robot {
 
   constructor(public type: Type) {
     this.name = this.generateName();
-    this.battery = 15;
+    this.battery = 100;
     this.decreaseBattery();
   }
 
   public reset() {
-    this.battery = 15;
+    this.battery = 100;
     this.name = this.generateName();
   }
 

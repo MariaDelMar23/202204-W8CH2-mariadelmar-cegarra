@@ -5,11 +5,11 @@ class Robot {
     constructor(type) {
         this.type = type;
         this.name = this.generateName();
-        this.battery = 15;
+        this.battery = 100;
         this.decreaseBattery();
     }
     reset() {
-        this.battery = 15;
+        this.battery = 100;
         this.name = this.generateName();
     }
     work() {
