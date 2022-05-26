@@ -1,6 +1,6 @@
-type Type = "Cleaner" | "Waiter" | "Developer";
+export type Type = "Cleaner" | "Waiter" | "Developer";
 
-class Robot {
+export class Robot {
   name: string;
   battery: number;
 
@@ -8,6 +8,11 @@ class Robot {
     this.name = this.generateName();
     this.battery = 100;
     this.decreaseBattery();
+  }
+
+  public reset() {
+    this.battery = 100;
+    this.name = this.generateName();
   }
 
   public work() {
@@ -32,11 +37,6 @@ class Robot {
           break;
       }
     }
-  }
-
-  public reset() {
-    this.battery = 100;
-    this.name = this.generateName();
   }
 
   decreaseBattery() {
@@ -70,5 +70,3 @@ class Robot {
     return name;
   }
 }
-
-export default Robot;
