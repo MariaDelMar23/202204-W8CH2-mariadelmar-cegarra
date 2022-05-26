@@ -1,2 +1,2 @@
 const a = 3;
-console.log();
+console.log(a);
