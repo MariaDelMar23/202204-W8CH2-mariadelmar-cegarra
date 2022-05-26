@@ -1,9 +1,16 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Robot = void 0;
 class Robot {
     constructor(type) {
         this.type = type;
         this.name = this.generateName();
         this.battery = 100;
         this.decreaseBattery();
+    }
+    reset() {
+        this.battery = 100;
+        this.name = this.generateName();
     }
     work() {
         if (this.battery > 0) {
@@ -22,10 +29,6 @@ class Robot {
                     break;
             }
         }
-    }
-    reset() {
-        this.battery = 100;
-        this.name = this.generateName();
     }
     decreaseBattery() {
         let intervalID = setInterval(() => {
@@ -54,4 +57,4 @@ class Robot {
         return name;
     }
 }
-export default Robot;
+exports.Robot = Robot;
