@@ -19,23 +19,25 @@ export class Robot {
     if (this.battery > 0) {
       switch (this.type) {
         case "Cleaner":
-          console.log("Larala larita, I clean my little house");
+          console.log(`${this.name}: Larala larita, I clean my little house`);
           break;
 
         case "Waiter":
-          console.log("Do you feel like a mini of fuet?");
+          console.log(`${this.name}: Do you feel like a mini of fuet?`);
           break;
 
         case "Developer":
           console.log(
-            "JavaScript is cool - I develop with JavaScript -> I'm cool"
+            `${this.name}: JavaScript is cool - I develop with JavaScript -> I'm cool`
           );
           break;
 
         default:
-          console.log("I don't know what I am :c");
+          console.log(`${this.name}: I don't know what I am :c`);
           break;
       }
+    } else {
+      console.log(`Robot ${this.name} is dead, it won't work`);
     }
   }
 
@@ -45,10 +47,10 @@ export class Robot {
         this.battery--;
       }
       if (this.battery === 10) {
-        console.log("I'm running out of battery");
+        console.log(`${this.name}: I'm running out of battery`);
       }
       if (this.battery === 0) {
-        console.log("I'm dead");
+        console.log(`${this.name}: I'm dead`);
         clearInterval(intervalID);
       }
     }, 1000);
